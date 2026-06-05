@@ -6,105 +6,122 @@
 <title>STAYA</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
 background:#fff;
-color:#222;
+color:#111;
 }
 
 header{
-padding:25px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+z-index:1000;
 border-bottom:1px solid #eee;
 }
 
 .logo{
-font-size:28px;
+font-size:32px;
 font-weight:700;
 letter-spacing:3px;
 }
 
 nav a{
 text-decoration:none;
-color:#222;
-margin-left:20px;
+color:#111;
+margin-left:30px;
+font-size:15px;
 }
 
 .hero{
-height:80vh;
-background:url("https://images.unsplash.com/photo-1496747611176-843222e1e57b") center center/cover;
+height:100vh;
+background:url('BANNER.JPEG') center center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(255,255,255,0.35);
 }
 
 .hero-content{
-background:rgba(255,255,255,.85);
-padding:40px;
-text-align:center;
+position:relative;
+z-index:2;
 }
 
 .hero h1{
-font-size:50px;
+font-size:72px;
 margin-bottom:15px;
+letter-spacing:3px;
 }
 
 .hero p{
-margin-bottom:20px;
+font-size:20px;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
-background:#000;
-color:#fff;
+padding:14px 28px;
+background:#111;
+color:white;
 text-decoration:none;
-border-radius:5px;
 margin:5px;
+border-radius:5px;
 }
 
 .section{
-padding:80px 10%;
+padding:100px 8%;
 }
 
-.section h2{
+.section-title{
 text-align:center;
-margin-bottom:40px;
-font-size:32px;
+font-size:42px;
+margin-bottom:50px;
 }
 
-.products{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
-border:1px solid #eee;
 overflow:hidden;
+border-radius:12px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .card img{
 width:100%;
-height:350px;
+height:420px;
 object-fit:cover;
+display:block;
 }
 
 .card h3{
-padding:15px;
-}
-
-.card p{
-padding:0 15px 15px;
+padding:18px;
+text-align:center;
+font-size:18px;
 }
 
 .about{
@@ -112,120 +129,162 @@ max-width:900px;
 margin:auto;
 text-align:center;
 line-height:1.8;
+font-size:18px;
 }
 
-.contact{
-text-align:center;
+.social{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.social a{
+padding:14px 24px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:6px;
 }
 
 footer{
-padding:30px;
+padding:40px;
 text-align:center;
 border-top:1px solid #eee;
-margin-top:50px;
+margin-top:80px;
 }
 
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+nav{
+display:none;
+}
+
+.card img{
+height:350px;
+}
+}
 </style>
 
 </head>
 <body>
 
 <header>
-
-<div class="logo">
-STAYA
-</div>
+<div class="logo">STAYA</div>
 
 <nav>
 <a href="#collection">Collection</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </header>
 
 <section class="hero">
 
 <div class="hero-content">
+<h1>STAYA</h1>
+<p>Timeless Pieces For Modern Women</p>
 
-<h1>Modern Women Essentials</h1>
-
-<p>
-Designed for everyday elegance.
-</p>
-
-<a href="https://wa.me/" class="btn">
-Order via WhatsApp
-</a>
-
-<a href="https://www.tiktok.com/" class="btn">
+<a class="btn" href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/" target="_blank">
 Shop TikTok
 </a>
 
-</div>
-
-</section>
-
-<section class="section" id="collection">
-
-<h2>Featured Collection</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
-<h3>Vélista Top</h3>
-<p>Elegant sleeveless top.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f">
-<h3>Curve Pants</h3>
-<p>Comfortable premium pants.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
-<h3>New Collection</h3>
-<p>Timeless modern look.</p>
-</div>
+<a class="btn" href="https://wa.me/6282121770770" target="_blank">
+Order via WhatsApp
+</a>
 
 </div>
 
 </section>
 
-<section class="section" id="about">
+<section id="collection" class="section">
+
+<h2 class="section-title">Latest Collection</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="nara-pants.JPEG">
+<h3>Nara Curve Pants</h3>
+</div>
+
+<div class="card">
+<img src="nara-pantsblack.JPEG">
+<h3>Nara Curve Pants Black</h3>
+</div>
+
+<div class="card">
+<img src="kara-cotton.JPEG">
+<h3>Kara Cotton Top</h3>
+</div>
+
+<div class="card">
+<img src="audreytop.JPEG">
+<h3>Audrey Top</h3>
+</div>
+
+<div class="card">
+<img src="clairtop.JPEG">
+<h3>Clair Top</h3>
+</div>
+
+<div class="card">
+<img src="claratop.JPEG">
+<h3>Clara Top</h3>
+</div>
+
+<div class="card">
+<img src="gisha-lace-top.JPEG">
+<h3>Gisha Lace Top</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2 class="section-title">About STAYA</h2>
 
 <div class="about">
+STAYA is a women fashion label focused on timeless silhouettes,
+elevated essentials, and effortless elegance.
 
-<h2>About STAYA</h2>
-
-<p>
-STAYA is a modern womenswear brand focused on timeless silhouettes,
-premium fabrics and everyday elegance.
-Each piece is designed to help women feel confident, comfortable and effortlessly stylish.
-</p>
-
+Every piece is thoughtfully designed to make women feel confident,
+comfortable, and sophisticated in their everyday moments.
 </div>
 
 </section>
 
-<section class="section" id="contact">
+<section id="contact" class="section">
 
-<div class="contact">
+<h2 class="section-title">Connect With Us</h2>
 
-<h2>Contact Us</h2>
+<div class="social">
 
-<a href="https://wa.me/" class="btn">
+<a href="https://wa.me/6282121770770" target="_blank">
 WhatsApp
 </a>
 
-<a href="https://instagram.com/" class="btn">
+<a href="https://www.instagram.com/stayaid" target="_blank">
 Instagram
 </a>
 
-<a href="https://shopee.co.id/" class="btn">
+<a href="https://s.shopee.co.id/AKXxTZlHpK" target="_blank">
 Shopee
+</a>
+
+<a href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/" target="_blank">
+TikTok Shop
 </a>
 
 </div>
@@ -233,9 +292,7 @@ Shopee
 </section>
 
 <footer>
-
 © 2026 STAYA. All Rights Reserved.
-
 </footer>
 
 </body>
