@@ -7,7 +7,22 @@
 <title>Velista Top | STAYA</title>
 
 <style>
+.back-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:30px;
+text-decoration:none;
+color:#111;
+font-size:13px;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+}
 
+.back-btn:hover{
+opacity:.6;
+}
 *{
 margin:0;
 padding:0;
@@ -227,6 +242,10 @@ transform:scale(1.05);
 
 <div class="container">
 
+<a href="index.html" class="back-btn">
+← Back to Collection
+</a>
+
 <div class="product">
 
 <div class="gallery">
@@ -379,12 +398,16 @@ comfort throughout the day.
 </div>
 <script>
 function changeImage(image){
-document.getElementById("mainImage").src=image;
-}
-</script>
-  <script>
-function changeImage(imageSrc){
-document.getElementById("mainImage").src = imageSrc;
+
+const mainImage = document.getElementById("mainImage");
+
+mainImage.src = image;
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
 }
 </script>
 </body>
