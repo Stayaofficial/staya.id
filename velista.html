@@ -34,14 +34,16 @@ padding:50px;
 
 .product{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+grid-template-columns:58% 42%;
+gap:40px;
 align-items:start;
 }
 
 .gallery img{
 width:100%;
 border-radius:12px;
+max-height:700px;
+object-fit:cover;
 }
 
 h1{
@@ -106,10 +108,12 @@ border-radius:6px;
 }
 
 .buttons{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:15px;
+margin:20px 0 30px;
+}
+
+.buttons a{
+display:block;
+margin-bottom:10px;
 }
 
 .btn{
@@ -144,7 +148,14 @@ color:#666;
 @media(max-width:768px){
 
 .product{
-grid-template-columns:1fr;
+display:grid;
+grid-template-columns:58% 42%;
+gap:40px;
+align-items:start;
+}
+  .product-info{
+position:sticky;
+top:100px;
 }
 
 .container{
@@ -165,9 +176,10 @@ color:white;
 text-align:center;
 text-decoration:none;
 font-weight:600;
-border-radius:8px;
-margin-top:25px;
-transition:0.3s;
+border-radius:10px;
+margin-top:12px;
+transition:.3s;
+letter-spacing:.5px;
 }
 
 .order-btn:hover{
@@ -187,19 +199,16 @@ overflow-x:auto;
 padding-bottom:8px;
 }
 
-.thumbs img{
+.thumbnails img{
 width:70px;
 height:90px;
 object-fit:cover;
-cursor:pointer;
 border-radius:8px;
-border:1px solid #ddd;
-flex-shrink:0;
+cursor:pointer;
 transition:.2s;
 }
 
-.thumbs img:hover{
-opacity:.8;
+.thumbnails img:hover{
 transform:scale(1.05);
 }
 </style>
@@ -266,7 +275,7 @@ onclick="changeImage(this.src)">
 
 </div>
 
-<div>
+<div class="product-info">
 
 <h1>Velista Top</h1>
 
@@ -277,6 +286,26 @@ Rp 199.000
 <p class="new-price">
 Rp 159.000
 </p>
+  <div class="buttons">
+
+<a class="order-btn"
+href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Velista%20Top%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
+target="_blank">
+Order via WhatsApp
+</a>
+
+<a class="btn tiktok"
+href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
+Shop at TikTok
+</a>
+
+<a class="btn shopee"
+href="https://s.shopee.co.id/AKXxTZlHpK">
+Shop at Shopee
+</a>
+
+</div>
+
 
 <div class="section-title">
 Available Colors
@@ -323,48 +352,17 @@ L — Waist 101-105 cm | Length 69 cm<br>
 
 <div class="description">
 
-Premium sleeveless top designed with a flattering waist silhouette that enhances your natural shape while maintaining comfort throughout the day.
-
+✓ Premium Semi Wool Fabric
 ✓ Elegant Waist-Shaping Design
-
-✓ Premium Soft Fabric
-
 ✓ Lightweight & Comfortable
-
-✓ Breathable Material
-
-✓ Feminine & Modern Silhouette
-
+✓ Office & Semi Formal Ready
 ✓ Easy To Mix & Match
 
-✓ Suitable For Casual, Office & Semi Formal Looks
-
-✓ Premium Finishing Detail
-
-✓ Comfortable For Daily Wear
-
-Velista Top combines effortless elegance with a modern feminine touch. The structured waist detail creates a flattering silhouette, while the clean sleeveless design makes it versatile for both casual and elevated styling. Perfect to pair with trousers, skirts, or denim for a polished everyday look.
+Velista Top is designed with a structured silhouette
+that creates a flattering waistline while maintaining
+comfort throughout the day.
 </div>
 
-<div class="buttons">
-
-<a class="order-btn"
-href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Velista%20Top%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
-target="_blank">
-Order via WhatsApp
-</a>
-
-<a class="btn tiktok"
-href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
-Shop at TikTok
-</a>
-
-<a class="btn shopee"
-href="https://s.shopee.co.id/AKXxTZlHpK">
-Shop at Shopee
-</a>
-
-</div>
 
 </div>
 
