@@ -284,11 +284,20 @@ Available Colors
 
 <div class="colors">
 
-<div class="color" style="background:#4A3428;"></div>
+<div class="color"
+style="background:#4A3428;"
+onclick="changeImage('velista-esp1.JPEG')">
+</div>
 
-<div class="color" style="background:#000000;"></div>
+<div class="color"
+style="background:#000000;"
+onclick="changeImage('velista-black2.jpg')">
+</div>
 
-<div class="color" style="background:#F8F5EE;"></div>
+<div class="color"
+style="background:#F8F5EE;"
+onclick="changeImage('velista-bw1.JPEG')">
+</div>
 
 </div>
 
@@ -365,6 +374,11 @@ Shop at Shopee
 <script>
 function changeImage(image){
 document.getElementById("mainImage").src=image;
+}
+</script>
+  <script>
+function changeImage(imageSrc){
+document.getElementById("mainImage").src = imageSrc;
 }
 </script>
 </body>
