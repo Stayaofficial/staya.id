@@ -7,7 +7,22 @@
 <title>Nara Curve Pants | STAYA</title>
 
 <style>
+.back-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:30px;
+text-decoration:none;
+color:#111;
+font-size:13px;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+}
 
+.back-btn:hover{
+opacity:.6;
+}
 *{
 margin:0;
 padding:0;
@@ -34,14 +49,16 @@ padding:50px;
 
 .product{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+grid-template-columns:58% 42%;
+gap:40px;
 align-items:start;
 }
 
 .gallery img{
 width:100%;
 border-radius:12px;
+max-height:700px;
+object-fit:cover;
 }
 
 h1{
@@ -106,10 +123,12 @@ border-radius:6px;
 }
 
 .buttons{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:15px;
+margin:20px 0 30px;
+}
+
+.buttons a{
+display:block;
+margin-bottom:10px;
 }
 
 .btn{
@@ -140,11 +159,26 @@ margin-top:30px;
 line-height:1.8;
 color:#666;
 }
+.product{
+display:grid;
+grid-template-columns:58% 42%;
+gap:40px;
+align-items:start;
+}
 
+.product-info{
+position:sticky;
+top:100px;
+}
 @media(max-width:768px){
 
 .product{
-grid-template-columns:1fr;
+display:block;
+}
+
+.product-info{
+position:static;
+margin-top:25px;
 }
 
 .container{
@@ -165,13 +199,40 @@ color:white;
 text-align:center;
 text-decoration:none;
 font-weight:600;
-border-radius:8px;
-margin-top:25px;
-transition:0.3s;
+border-radius:10px;
+margin-top:12px;
+transition:.3s;
+letter-spacing:.5px;
 }
 
 .order-btn:hover{
 background:#333;
+}
+  .main-image{
+width:100%;
+border-radius:12px;
+display:block;
+}
+
+.thumbs{
+display:flex;
+gap:8px;
+margin-top:12px;
+overflow-x:auto;
+padding-bottom:8px;
+}
+
+.thumbnails img{
+width:70px;
+height:90px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+transition:.2s;
+}
+
+.thumbnails img:hover{
+transform:scale(1.05);
 }
 </style>
 
@@ -181,39 +242,127 @@ background:#333;
 
 <div class="container">
 
+<a href="index.html" class="back-btn">
+← Back to Collection
+</a>
+
 <div class="product">
 
 <div class="gallery">
 
-<img src="nara-pants.JPEG">
+<img id="mainImage"
+src="nara-pantsashduduk.JPEG"
+class="main-image">
+
+<div class="thumbs">
+
+<img src="nara-pantsashduduk.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsash1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsash3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsashzoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsgrey1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsgrey3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsice1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsice3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsicezoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsblack1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsblack22.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsblack3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="nara-pantsblackzoom.JPEG"
+onclick="changeImage(this.src)">
+
 
 </div>
 
-<div>
+</div>
 
-<h1>Nara Curvé Pants</h1>
+<div class="product-info">
+
+<h1>Nara Curve Pants</h1>
 
 <p class="old-price">
 Rp 299.000
 </p>
 
 <p class="new-price">
-Rp 240.000
+Rp 239.000
 </p>
+  <div class="buttons">
+
+<a class="order-btn"
+href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Nara%20Pants%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
+target="_blank">
+Order via WhatsApp
+</a>
+
+<a class="btn tiktok"
+href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
+Shop at TikTok
+</a>
+
+<a class="btn shopee"
+href="https://s.shopee.co.id/AKXxTZlHpK">
+Shop at Shopee
+</a>
+
+</div>
+
 
 <div class="section-title">
 Available Colors
 </div>
 
 <div class="colors">
-<div class="color" style="background:#8b7355;"></div>
-<div class="color" style="background:#808080;"></div>
-<div class="color" style="background:#d9e7f5;"></div>
-<div class="color" style="background:#000;"></div>
+
+<div class="color"
+style="background:#8b7355;"
+onclick="changeImage('nara-pantsashduduk.JPEG')">
 </div>
-  <div class="description">
+
+<div class="color"
+style="background:#808080;"
+onclick="changeImage('nara-pantsgrey1.JPEG')">
+</div>
+
+<div class="color"
+style="background:#d9e7f5;"
+onclick="changeImage('nara-pantsice1.JPEG')">
+</div>
+
+  <div class="color"
+style="background:#000;"
+onclick="changeImage('nara-pantsblack1.JPEG')">
+</div>
+
+</div>
+
+<p style="margin-top:15px;color:#666;">
 Colors : Ash Brown, Grey, Ice Blue, Black
-</div>
+</p>
 
 <div class="section-title">
 Size Information
@@ -222,7 +371,7 @@ Size Information
 S — Waist 70 cm | Hip 86 cm | Length 102 cm<br>
 M — Waist 76 cm | Hip 94 cm | Length 102 cm<br>
 L — Waist 84 cm | Hip 96 cm | Length 103 cm<br>
-XL — Waist 90 cm | Hip 107 cm | Length 103 cm
+XL — Waist 90 cm | Hip 107 cm | Length 103 cm<br>
 </div>
 
 <div class="sizes">
@@ -261,31 +410,25 @@ a versatile wardrobe essential.
 
 </div>
 
-<div class="buttons">
-
-<a class="order-btn"
-href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Nara%20Curve%20Pants%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
-target="_blank">
-Order via WhatsApp
-</a>
-
-<a class="btn tiktok"
-href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
-Shop at TikTok
-</a>
-
-<a class="btn shopee"
-href="https://s.shopee.co.id/AKXxTZlHpK">
-Shop at Shopee
-</a>
 
 </div>
 
 </div>
 
 </div>
+<script>
+function changeImage(image){
 
-</div>
+const mainImage = document.getElementById("mainImage");
 
+mainImage.src = image;
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
+}
+</script>
 </body>
 </html>
