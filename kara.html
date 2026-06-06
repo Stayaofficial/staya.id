@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,22 @@
 <title>Kara Halter Top | STAYA</title>
 
 <style>
+.back-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:30px;
+text-decoration:none;
+color:#111;
+font-size:13px;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+}
 
+.back-btn:hover{
+opacity:.6;
+}
 *{
 margin:0;
 padding:0;
@@ -25,17 +41,25 @@ max-width:1200px;
 margin:auto;
 padding:50px;
 }
+  .size-chart{
+    margin-top:15px;
+    line-height:1.8;
+    color:#555;
+    font-size:15px;
+}
 
 .product{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+grid-template-columns:58% 42%;
+gap:40px;
 align-items:start;
 }
 
 .gallery img{
 width:100%;
 border-radius:12px;
+max-height:700px;
+object-fit:cover;
 }
 
 h1{
@@ -100,10 +124,12 @@ border-radius:6px;
 }
 
 .buttons{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:15px;
+margin:20px 0 30px;
+}
+
+.buttons a{
+display:block;
+margin-bottom:10px;
 }
 
 .btn{
@@ -134,11 +160,26 @@ margin-top:30px;
 line-height:1.8;
 color:#666;
 }
+.product{
+display:grid;
+grid-template-columns:58% 42%;
+gap:40px;
+align-items:start;
+}
 
+.product-info{
+position:sticky;
+top:100px;
+}
 @media(max-width:768px){
 
 .product{
-grid-template-columns:1fr;
+display:block;
+}
+
+.product-info{
+position:static;
+margin-top:25px;
 }
 
 .container{
@@ -159,13 +200,40 @@ color:white;
 text-align:center;
 text-decoration:none;
 font-weight:600;
-border-radius:8px;
-margin-top:25px;
-transition:0.3s;
+border-radius:10px;
+margin-top:12px;
+transition:.3s;
+letter-spacing:.5px;
 }
 
 .order-btn:hover{
 background:#333;
+}
+  .main-image{
+width:100%;
+border-radius:12px;
+display:block;
+}
+
+.thumbs{
+display:flex;
+gap:8px;
+margin-top:12px;
+overflow-x:auto;
+padding-bottom:8px;
+}
+
+.thumbnails img{
+width:70px;
+height:90px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+transition:.2s;
+}
+
+.thumbnails img:hover{
+transform:scale(1.05);
 }
 </style>
 
@@ -175,15 +243,65 @@ background:#333;
 
 <div class="container">
 
+<a href="index.html" class="back-btn">
+← Back to Collection
+</a>
+
 <div class="product">
 
 <div class="gallery">
 
-<img src="kara-cotton.JPEG">
+<img id="mainImage"
+src="kara-cottonwhite.JPEG"
+class="main-image">
+
+<div class="thumbs">
+
+<img src="kara-cottonwhite1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonwhite2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonwhite3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonblack1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonblack2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonblackzoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonmaroon1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonmaroon2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonmaroon3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonmaroonzoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonbutter1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonbutter2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="kara-cottonbutterzoom.JPEG"
+onclick="changeImage(this.src)">
+
 
 </div>
 
-<div>
+</div>
+
+<div class="product-info">
 
 <h1>Kara Halter Top</h1>
 
@@ -194,6 +312,26 @@ Rp 229.000
 <p class="new-price">
 Rp 149.000
 </p>
+  <div class="buttons">
+
+<a class="order-btn"
+href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Kara%20Top%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
+target="_blank">
+Order via WhatsApp
+</a>
+
+<a class="btn tiktok"
+href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
+Shop at TikTok
+</a>
+
+<a class="btn shopee"
+href="https://s.shopee.co.id/AKXxTZlHpK">
+Shop at Shopee
+</a>
+
+</div>
+
 
 <div class="section-title">
 Available Colors
@@ -201,34 +339,43 @@ Available Colors
 
 <div class="colors">
 
-<div class="color" style="background:#6A1028;"></div>
+<div class="color"
+style="background:#FFFFFF;border:1px solid #ddd;"
+onclick="changeImage('kara-cottonwhite.JPEG')">
+</div>
 
-<div class="color" style="background:#000000;"></div>
+<div class="color"
+style="background:#000000;"
+onclick="changeImage('kara-cottonblack1.JPEG')">
+</div>
 
-<div class="color" style="background:#FFFFFF;border:1px solid #ddd;"></div>
+<div class="color"
+style="background:#6A1028;"
+onclick="changeImage('kara-cottonmaroon1.JPEG')">
+</div>
 
-<div class="color" style="background:#F7E7A9;"></div>
+  <div class="color"
+style="background:#F7E7A9;"
+onclick="changeImage('kara-cottonbutter1.JPEG')">
+</div>
 
 </div>
 
 <p style="margin-top:15px;color:#666;">
-Colors : Maroon, Black, White, Butter
+Colors : White, Black, Maroon, Butter
 </p>
-
-</div>
 
 <div class="section-title">
 Size Information
 </div>
+  <div class="size-chart">
+Bust 66-104 cm<br>
+Back Elastic Band (Belakang Karet)<br>
+Flexible Fit Following Body Shape<br>
+</div>
 
 <div class="sizes">
 <div class="size">S-M</div>
-</div>
-
-<div class="description">
-Bust : 66 - 104 cm<br>
-Back Elastic Band<br>
-Flexible Fit Following Body Shape
 </div>
 
 <div class="description">
@@ -253,33 +400,28 @@ Flexible Fit Following Body Shape
 
 Kara Halter Top combines a flattering halter neckline with a comfortable elastic-back construction that adapts naturally to your body shape. The premium cotton fabric feels soft against the skin while providing enough structure to create a polished and feminine look. Available in vibrant colors that instantly elevate any outfit.
 
+
 </div>
 
-<div class="buttons">
-
-<a class="order-btn"
-href="https://wa.me/6282121770770?text=Halo%20Admin%20STAYA%20✨%0A%0ASaya%20ingin%20order%20produk%20berikut:%0A%0A🛍%20Produk%20:%20Kara%20Halter%20Top%0A🎨%20Warna%20:%0A📏%20Size%20:%0A%0A👤%20Nama%20:%0A📱%20No%20HP%20:%0A📍%20Alamat%20Lengkap%20:%0A%0AMohon%20dibantu%20proses%20ordernya.%0ATerima%20kasih%20🤍"
-target="_blank">
-Order via WhatsApp
-</a>
-
-<a class="btn tiktok"
-href="https://vt.tiktok.com/ZS92x7h5GhGvm-Dg4yf/">
-Shop at TikTok
-</a>
-
-<a class="btn shopee"
-href="https://s.shopee.co.id/AKXxTZlHpK">
-Shop at Shopee
-</a>
 
 </div>
 
 </div>
 
 </div>
+<script>
+function changeImage(image){
 
-</div>
+const mainImage = document.getElementById("mainImage");
 
+mainImage.src = image;
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
+}
+</script>
 </body>
 </html>
