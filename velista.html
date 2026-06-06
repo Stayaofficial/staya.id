@@ -144,18 +144,26 @@ margin-top:30px;
 line-height:1.8;
 color:#666;
 }
-
-@media(max-width:768px){
-
 .product{
 display:grid;
 grid-template-columns:58% 42%;
 gap:40px;
 align-items:start;
 }
-  .product-info{
+
+.product-info{
 position:sticky;
 top:100px;
+}
+@media(max-width:768px){
+
+.product{
+display:block;
+}
+
+.product-info{
+position:static;
+margin-top:25px;
 }
 
 .container{
