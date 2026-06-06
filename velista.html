@@ -173,6 +173,35 @@ transition:0.3s;
 .order-btn:hover{
 background:#333;
 }
+  .main-image{
+width:100%;
+border-radius:12px;
+display:block;
+}
+
+.thumbs{
+display:flex;
+gap:8px;
+margin-top:12px;
+overflow-x:auto;
+padding-bottom:8px;
+}
+
+.thumbs img{
+width:70px;
+height:90px;
+object-fit:cover;
+cursor:pointer;
+border-radius:8px;
+border:1px solid #ddd;
+flex-shrink:0;
+transition:.2s;
+}
+
+.thumbs img:hover{
+opacity:.8;
+transform:scale(1.05);
+}
 </style>
 
 </head>
@@ -185,7 +214,55 @@ background:#333;
 
 <div class="gallery">
 
-<img src="velista-black3.jpg">
+<img id="mainImage"
+src="velista-allcolors.jpg"
+class="main-image">
+
+<div class="thumbs">
+
+<img src="velista-black2.jpg"
+onclick="changeImage(this.src)">
+
+<img src="velista-black3.jpg"
+onclick="changeImage(this.src)">
+
+<img src="velista-blackzoom.jpg"
+onclick="changeImage(this.src)">
+
+<img src="velista-esp1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-esp2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-espzoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-bw1.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-bw2.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-bw3.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-bwzoom.JPEG"
+onclick="changeImage(this.src)">
+
+<img src="velista-allcolors.jpg"
+onclick="changeImage(this.src)">
+
+<img src="velista-bahan.jpeg"
+onclick="changeImage(this.src)">
+
+<img src="velista-kancing.jpeg"
+onclick="changeImage(this.src)">
+
+<img src="velista-ring.jpeg"
+onclick="changeImage(this.src)">
+
+</div>
 
 </div>
 
@@ -285,6 +362,10 @@ Shop at Shopee
 </div>
 
 </div>
-
+<script>
+function changeImage(image){
+document.getElementById("mainImage").src=image;
+}
+</script>
 </body>
 </html>
