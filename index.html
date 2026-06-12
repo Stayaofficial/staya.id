@@ -209,7 +209,33 @@ height:350px;
     background:#ddd;
     margin:10px auto;
 }
+.scroll-indicator{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+margin-top:40px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#111;
+animation:float 1.8s infinite;
+}
 
+.scroll-indicator span{
+width:40px;
+height:1px;
+background:#111;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(8px);
+}
+}
 </style>
 
 </head>
@@ -247,6 +273,11 @@ Shop WhatsApp
     <p class="promo-banner">
 Exclusive Promo & Priority Service via WhatsApp
 </p>
+<a href="#collection" class="scroll-indicator">
+<span></span>
+Discover Collection ↓
+<span></span>
+</a>
 
 </div>
 
